@@ -4,8 +4,14 @@ import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 
 @Component({
   selector: 'vdl-header',
-  templateUrl: './header.component.html',
-  styleUrls: [ './header.component.scss' ]
+  template: `
+    <h1 [style]="getStyle()">
+      <ng-content></ng-content>
+    </h1>
+  `,
+  styles: [`
+
+  `]
 })
 export class HeaderComponent {
 

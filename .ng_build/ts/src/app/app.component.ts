@@ -3,8 +3,12 @@ import { HeaderConfig } from './test/header/header-config';
 
 @Component({
   selector: 'vdl-root',
-  templateUrl: './app.component.html',
-  styleUrls: [ './app.component.scss' ]
+  template: `
+    <vdl-header [config]="config">{{title}}</vdl-header>
+  `,
+  styles: [`
+
+  `]
 })
 export class AppComponent {
   title = 'Does this work?';
